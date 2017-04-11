@@ -16,14 +16,13 @@
 
 package com.bobomee.android.data_structures_algorithms.sort;
 
+import com.bobomee.android.data_structures_algorithms.Utils;
+
 /**
- * Project ID：400YF17051<br/>
- * Resume: 冒泡排序
+ * 冒泡排序时间复杂度O(n2)
  *
- * @author 汪波
- * @version 1.0
- * @see
- * @since 2017/4/5 汪波 first commit
+ * @author BoBoMEe
+ * @since 2017/4/5
  */
 public class BubbleSort {
   /**
@@ -43,6 +42,22 @@ public class BubbleSort {
           arr[j] = arr[j + 1];
           arr[j + 1] = temp;
         }
+      }
+    }
+  }
+
+  public static void bubbleSort_(int[] arr) {
+    boolean swap = false;
+    for (int i = 0; i < arr.length - 1; i++) { //最多进行 n-1 趟
+      swap = false;
+      for (int j = arr.length - 1; j > i; j--) { //从下往上扫描
+        if (arr[j] < arr[j - 1]) {
+          Utils.swap(arr, j, j - 1);
+          swap = true;
+        }
+      }
+      if (!swap) {
+        break; // 未发生交换，终止算法
       }
     }
   }
