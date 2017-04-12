@@ -17,12 +17,16 @@
 package com.bobomee.android.data_structures_algorithms.sort;
 
 /**
- * Project ID：400YF17051<br/>
  * Resume: 插入排序
+ * 时间复杂度仍然为 O(N²)
+ *
+ * 1. 比选择和冒泡要更快一些
+ * 2. 经常被用在教复杂的排序算法的最后阶段，例如快速排序
+ * 3. 对于基本有序的文件进行排序，只需要O（N）的时间
+ * 4. 对于逆序排列的数据，插入排序 并不比冒泡排序快。
  *
  * @author 汪波
  * @version 1.0
- * @see
  * @since 2017/4/5 汪波 first commit
  */
 public class InsertionSort {

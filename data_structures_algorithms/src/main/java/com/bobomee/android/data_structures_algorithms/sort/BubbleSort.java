@@ -23,10 +23,17 @@ import com.bobomee.android.data_structures_algorithms.Utils;
  *
  * @author BoBoMEe
  * @since 2017/4/5
+ *
+ * 1. 比较两个数字
+ * 2. 如果左边的数字大，则交换两个数字的位置
+ * 3. 向右移动一个位置，比较下两个数字
+ *
+ * 无论何时，只要看到循环嵌套在另一个循环里，就可以怀疑这个算法的运行时间为O(N²)级，
+ *
  */
 public class BubbleSort {
   /**
-   * 对输入的整型数组进行冒泡排序
+   * 简版冒泡排序
    *
    * @param arr 要排序的整型数组
    */
@@ -46,6 +53,9 @@ public class BubbleSort {
     }
   }
 
+  /**
+   * 优化的冒泡排序
+   */
   public static void bubbleSort_(int[] arr) {
     boolean swap = false;
     for (int i = 0; i < arr.length - 1; i++) { //最多进行 n-1 趟
