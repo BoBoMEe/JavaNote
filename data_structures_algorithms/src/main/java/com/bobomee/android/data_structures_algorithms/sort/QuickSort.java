@@ -22,14 +22,24 @@ package com.bobomee.android.data_structures_algorithms.sort;
  * @author BoBoMEe
  * @version 1.0
  * @since 2017/3/10.
+ *
+ * 如其名称，快速排序 非常简洁，高效。
+ *
+ * 快速排序也采用“分而治之”的想法。
+ *
+ * 随机选定一个元素作为轴值，利用该轴值将数组分为左右两部分，
+ * 左边元素都比轴值小，右边元素都比轴值大，但它们不是完全排序的。
+ * 在此基础上，分别对左右两部分递归调用快速排序，
+ * 使得左右部分完全排序。
+ *
+ * 算法的平均时间复杂度是O(nlogn)，在最坏情况下为O(n^2)，额外空间复杂度为O(logn)
  */
 public class QuickSort {
 
   /**
    * 对输入的整型数组进行快速排序
    *
-   * @param arr
-   *            需要排序的整型数组
+   * @param arr 需要排序的整型数组
    */
   public static void quickSort(int[] arr, int low, int high) {
     if (low < high) {
@@ -47,13 +57,9 @@ public class QuickSort {
    * 使得arr[index+1...high]中的每一个元素都大于等于arr[index]，
    * 而arr[low...index-1]中的每一个元素都小于arr[index]， 其中计算下标index也是划分的一部分。
    *
-   * @param arr
-   *            需要划分的数组
-   * @param low
-   *            需要划分的数组起始下标
-   * @param high
-   *            需要划分的数组末尾下标
-   * @return
+   * @param arr 需要划分的数组
+   * @param low 需要划分的数组起始下标
+   * @param high 需要划分的数组末尾下标
    */
   private static int partition(int[] arr, int low, int high) {
 

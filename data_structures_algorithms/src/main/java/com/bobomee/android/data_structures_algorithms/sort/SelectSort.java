@@ -23,12 +23,23 @@ package com.bobomee.android.data_structures_algorithms.sort;
  *
  * 选择排序
  *
- * 改进了冒泡排序，将必要的交换次数从O(N²)减少到O(N)
- *
+ * 改进了冒泡排序，将必要的交换次数从O(N²)减少到O(N)，但比较次数仍保持为 O(N²)。
  * 每次选择剩余元素中最小的，和已排序的数组的后面一个元素交换。
  *
+ * 带排序的数据： 2， 1， 5， 4， 9
+ * 第一次排序： 1， 2， 5， 4， 9
+ * 第二次排序： 1， 2， 5， 4， 9
+ * 第三次排序： 1， 2， 4， 5， 9
+ * 第四次排序： 1， 2， 4， 5， 9
  *
+ * 步骤：
+ * （1）每次排序的时候都需要寻找第n小的数据，并且和array[n-1]发生交换
+ * （2）等到n个数据都排序好，那么选择排序结束。
  *
+ * 参考: <a href='http://blog.csdn.net/feixiaoxing/article/details/6874619'></a>
+ *
+ * 和冒泡排序的区别：在这个算法中有序的队员都排在队列的最左边（数组中较小的下标值），而冒泡排序则是优先排列在队列的右边。
+ * 比较次数是主要的，所以结论是选择排序和冒泡排序一样 都是O(N²)的效率。
  */
 public class SelectSort {
   public static int[] selection(int[] a) {
@@ -38,7 +49,7 @@ public class SelectSort {
       //每次将未排序部分的首元素下标赋值给下标min
       min = i;
       //得到未排序部分的最小值的下标并赋值给min
-      for (j = i+1; j < n; j++) {
+      for (j = i + 1; j < n; j++) {
         if (a[j] < a[min]) {
           min = j;
         }
