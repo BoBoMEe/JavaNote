@@ -19,10 +19,11 @@ package com.bobomee.android.data_structures_algorithms.find;
 /**
  * @author bobomee
  * @since 2017/4/10
+ * 顺序查找
  */
-public class OrderSearch {
+public class OrderFind {
   /**
-   * 顺序查找平均时间复杂度 O（n）
+   * 平均时间复杂度 O（n）
    *
    * @param searchKey 要查找的值
    * @param array 数组（从这个数组中查找）
