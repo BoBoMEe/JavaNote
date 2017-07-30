@@ -1,4 +1,4 @@
-package com.bobomee.android.data_structures_algorithms.啊哈算法;
+package com.bobomee.android.data_structures_algorithms.aha;
 
 import java.util.LinkedList;
 import java.util.Queue;

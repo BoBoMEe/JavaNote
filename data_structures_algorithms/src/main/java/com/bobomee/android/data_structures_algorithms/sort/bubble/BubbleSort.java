@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-package com.bobomee.android.data_structures_algorithms.sort;
+package com.bobomee.android.data_structures_algorithms.sort.bubble;
 
 import com.bobomee.android.data_structures_algorithms.Utils;
 
@@ -29,7 +29,6 @@ import com.bobomee.android.data_structures_algorithms.Utils;
  * 3. 向右移动一个位置，比较下两个数字
  *
  * 无论何时，只要看到循环嵌套在另一个循环里，就可以怀疑这个算法的运行时间为O(N²)级，
- *
  */
 public class BubbleSort {
   /**
@@ -70,5 +69,23 @@ public class BubbleSort {
         break; // 未发生交换，终止算法
       }
     }
+  }
+
+  public static void main(String[] args) {
+    int i;
+    int[] a = { 20, 40, 30, 10, 60, 50 };
+
+    System.out.printf("before sort:");
+    for (i = 0; i < a.length; i++)
+      System.out.printf("%d ", a[i]);
+    System.out.printf("\n");
+
+    bubbleSort_(a);
+    //bubbleSort(a);
+
+    System.out.printf("after  sort:");
+    for (i = 0; i < a.length; i++)
+      System.out.printf("%d ", a[i]);
+    System.out.printf("\n");
   }
 }

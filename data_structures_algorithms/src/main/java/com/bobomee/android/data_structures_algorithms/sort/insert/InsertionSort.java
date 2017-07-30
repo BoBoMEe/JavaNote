@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-package com.bobomee.android.data_structures_algorithms.sort;
+package com.bobomee.android.data_structures_algorithms.sort.insert;
 
 /**
  * Resume: 插入排序

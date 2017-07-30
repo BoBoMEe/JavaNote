@@ -14,7 +14,9 @@
  *  limitations under the License.
  */
 
-package com.bobomee.android.data_structures_algorithms.sort;
+package com.bobomee.android.data_structures_algorithms.sort.heap;
+
+import static com.bobomee.android.data_structures_algorithms.Utils.swap;
 
 /**
  * @author 汪波
@@ -49,11 +51,7 @@ public class HeapSort {
       i = j;
     }
   }
-  public static  void swap(int[] arr,int i,int len){
-    int temp = arr[i];
-    arr[i] = arr[len];
-    arr[len] = temp;
-  }
+
   public static void main(String[] args) {
     int array[] = {20,50,20,40,70,10,80,30,60};
     System.out.println("排序之前：");

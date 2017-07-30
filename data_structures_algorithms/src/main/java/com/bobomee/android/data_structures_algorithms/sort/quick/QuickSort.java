@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-package com.bobomee.android.data_structures_algorithms.sort;
+package com.bobomee.android.data_structures_algorithms.sort.quick;
 
 /**
  * Resume:     快速排序实现（分治策略）
