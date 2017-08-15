@@ -1,1 +1,1 @@
-include ':app', ':designpatterns', ':data_structures_algorithms', ':concurrent_programming'
+include ':app', ':data_structures_algorithms', ':concurrent_programming'
